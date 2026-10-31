@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Utopia vs Dystopia</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400..600&family=Figtree:wght@400;500;600&display=swap">
+<style>
+  :root{
+    --bg:#e7ecf1; --ink:#15181d; --muted:#586072;
+    --display:'Fraunces',Georgia,serif; --body:'Figtree',system-ui,sans-serif;
+  }
+  @media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0e1014;--ink:#e9ebef;--muted:#9aa2ae;color-scheme:dark}}
+  :root[data-theme="dark"]{--bg:#0e1014;--ink:#e9ebef;--muted:#9aa2ae;color-scheme:dark}
+
+  *{box-sizing:border-box}
+
+
+  h1{font-family:var(--display);font-weight:600;text-align:center;margin:0;
+    font-size:clamp(2.2rem,8vw,3.4rem);letter-spacing:-.01em}
+  h1 .u{color:#1f9d57} h1 .d{color:#e4603a}
+  h1 small{font-weight:400;font-style:italic;color:var(--muted);font-size:.42em}
+
+  .cards{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:32px}
+  .card{border-radius:16px;padding:clamp(18px,4vw,26px);text-align:center}
+  .card.u{background:#eafaf1;color:#143a4f}
+  .card.d{background:#1b1e24;color:#cfd4dc}
+  .scene{display:block;width:100%;height:auto;border-radius:10px;margin-bottom:.8rem}
+  .card h2{font-family:var(--display);font-weight:600;margin:.4rem 0 .2rem;font-size:1.8rem}
+  .card.u h2{color:#0e3a52} .card.d h2{color:#f2f4f7}
+  .def{margin:0}
+
+  h3{font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:inherit;opacity:.55;margin:1.2rem 0 .4rem}
+  ul{list-style:none;margin:0;padding:0}
+  .ex li{font-family:var(--display)}
+  li{margin:.3rem 0}
+
+  .key{margin:26px auto 0;text-align:center;color:var(--muted);max-width:52ch}
+  .key .g{color:#1f9d57} .key .r{color:#e4603a}
+
+  @media (max-width:560px){.cards{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+
+<div class="wrap">
+  <h1><span class="u">Utopia</span> <small>vs</small> <span class="d">Dystopia</span></h1>
+
+  <div class="cards">
+    <section class="card u">
+      <svg class="scene" viewBox="0 0 400 150" role="img" aria-label="A sunny sky over green hills and a small town">
+        <defs>
+          <linearGradient id="usky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#8bd2f6"/><stop offset="1" stop-color="#e2f6ff"/></linearGradient>
+          <radialGradient id="usun" cx="50%" cy="50%" r="50%"><stop offset="0" stop-color="#fff6d6"/><stop offset="1" stop-color="#ffd24a"/></radialGradient>
+        </defs>
+        <rect width="400" height="150" fill="url(#usky)"/>
+        <circle cx="320" cy="48" r="22" fill="url(#usun)"/>
+        <g stroke="#ffd24a" stroke-width="3" stroke-linecap="round" opacity=".85">
+          <line x1="320" y1="12" x2="320" y2="4"/><line x1="282" y1="48" x2="274" y2="48"/>
+          <line x1="294" y1="22" x2="288" y2="16"/><line x1="346" y1="22" x2="352" y2="16"/>
+        </g>
+        <g fill="#fff" opacity=".9"><ellipse cx="96" cy="40" rx="30" ry="12"/><ellipse cx="122" cy="34" rx="20" ry="10"/></g>
+        <rect x="150" y="72" width="30" height="42" rx="3" fill="#fff"/>
+        <rect x="184" y="56" width="34" height="58" rx="3" fill="#f2f8ff"/><circle cx="201" cy="56" r="17" fill="#fff"/>
+        <rect x="222" y="80" width="26" height="34" rx="3" fill="#fff"/>
+        <g fill="#bfe0ff"><rect x="156" y="82" width="7" height="7"/><rect x="168" y="82" width="7" height="7"/><rect x="191" y="72" width="8" height="8"/><rect x="203" y="72" width="8" height="8"/></g>
+        <path d="M0 110 Q110 82 230 108 T400 102 V150 H0 Z" fill="#57bd71"/>
+        <path d="M0 126 Q140 104 280 124 T400 122 V150 H0 Z" fill="#3fa15a"/>
+        <rect x="60" y="104" width="5" height="14" fill="#6b4a2b"/><circle cx="62" cy="100" r="11" fill="#39944f"/>
+        <rect x="300" y="110" width="4" height="12" fill="#6b4a2b"/><circle cx="302" cy="107" r="9" fill="#2f8a47"/>
+      </svg>
+      <h2>Utopia</h2>
+      <p class="def">A perfect, ideal world where life is good for everyone.</p>
+      <h3>Traits</h3>
+      <ul><li>☮️ Peace</li><li>⚖️ Equality</li><li>🕊️ Freedom</li><li>😊 Happiness</li></ul>
+      <h3>Examples</h3>
+      <ul class="ex"><li>Star Trek</li></ul>
+    </section>
+
+    <section class="card d">
+      <svg class="scene" viewBox="0 0 400 150" role="img" aria-label="A dark city tower watched by a glowing eye of surveillance">
+        <defs>
+          <linearGradient id="dsky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#3a4049"/><stop offset="1" stop-color="#191c22"/></linearGradient>
+          <radialGradient id="deye" cx="50%" cy="50%" r="50%"><stop offset="0" stop-color="#ff7a5c"/><stop offset="1" stop-color="#b3331f"/></radialGradient>
+        </defs>
+        <rect width="400" height="150" fill="url(#dsky)"/>
+        <g fill="#565b64" opacity=".45"><ellipse cx="120" cy="34" rx="55" ry="13"/><ellipse cx="250" cy="26" rx="60" ry="12"/></g>
+        <path d="M288 44 q22 -20 44 0 q-22 20 -44 0Z" fill="#11141a" stroke="#6b7079" stroke-width="2"/>
+        <circle cx="310" cy="44" r="9" fill="url(#deye)"/><circle cx="310" cy="44" r="3.5" fill="#2a0d08"/>
+        <g fill="#111318"><rect x="150" y="60" width="28" height="56"/><rect x="182" y="40" width="24" height="76"/><rect x="210" y="70" width="22" height="46"/><rect x="120" y="76" width="24" height="40"/><rect x="236" y="66" width="20" height="50"/></g>
+        <g fill="#f0a24a" opacity=".85"><rect x="158" y="70" width="6" height="7"/><rect x="190" y="54" width="6" height="7"/><rect x="190" y="74" width="6" height="7"/><rect x="216" y="80" width="6" height="7"/></g>
+        <rect x="300" y="84" width="14" height="32" fill="#15171c"/>
+        <g fill="#4b505a" opacity=".65"><ellipse cx="307" cy="80" rx="11" ry="6"/><ellipse cx="318" cy="70" rx="9" ry="5"/></g>
+        <line x1="0" y1="124" x2="400" y2="124" stroke="#000" stroke-width="2" opacity=".5"/>
+      </svg>
+      <h2>Dystopia</h2>
+      <p class="def">A broken, frightening world where everything has gone wrong.</p>
+      <h3>Traits</h3>
+      <ul><li>🔒 Control</li><li>👁️ Surveillance</li><li>😨 Fear</li><li>📢 Lies</li></ul>
+      <h3>Examples</h3>
+      <ul class="ex"><li>The Hunger Games</li><li>Brave New World</li></ul>
+    </section>
+  </div>
+
+  <p class="key"><span class="g">Utopia</span> imagines the best world we could build. <span class="r">Dystopia</span> imagines the worst world we could build.</p>
+</div>
+
+</body>
+</html>
